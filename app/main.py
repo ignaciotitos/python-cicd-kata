@@ -10,7 +10,8 @@ from app.application.get_home_page import get_home_page
 
 
 
-
+def empty():
+    return None
 
 
 
