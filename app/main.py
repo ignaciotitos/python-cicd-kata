@@ -5,7 +5,7 @@ from app.application.get_dice_roll import get_dice_roll
 from app.application.get_home_page import get_home_page
 
 
-def empty() -> int:
+def empty() -> str:
     return 1
 
 
