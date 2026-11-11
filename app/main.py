@@ -5,6 +5,10 @@ from app.application.get_dice_roll import get_dice_roll
 from app.application.get_home_page import get_home_page
 
 
+def empty() -> int:
+    return 1
+
+
 def create_app() -> FastAPI:
     app = FastAPI()
 
