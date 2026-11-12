@@ -5,7 +5,7 @@ from app.application.get_dice_roll import get_dice_roll
 from app.application.get_home_page import get_home_page
 
 
-def create_app() -> str:
+def create_app() -> FastAPI:
     app = FastAPI()
 
     app.add_api_route(
