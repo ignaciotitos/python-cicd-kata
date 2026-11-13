@@ -4,9 +4,8 @@
 
 This repository contains a very simple web service that simulates rolling a die by generating a random number. The main purpose of this project is to help you practice and understand key concepts of Continuous Integration (CI) and Continuous Deployment (CD). Throughout this workshop, you will explore how to set up a CI/CD pipeline with GitHub Actions for code quality checks, deliver the image to DockerHub and deploy to Render.
 
-- **Workshop slides**: [View the slides](https://docs.google.com/presentation/d/17neLk6ssM7UQ9Pdps_acDprkiNpDgS43Ql9k1R6lwus/edit?usp=sharing)
-- **Deployed service**: [https://simple-service-wvoo.onrender.com](https://simple-service-wvoo.onrender.com)
-  _Note: Render will spin down the service if it doesn't receive requests for the last 15 minutes. For more details, check [this page](https://render.com/docs/free#spinning-down-on-idle)._
+- **Workshop slides**: [View the slides](https://drive.google.com/file/d/1e35IPeyIXVzQdm7Muk6vt8Y7_DxlSdzH/view?usp=sharing)
+- **Deployed service**: In progress..
 
 ## Table of Contents
 
@@ -122,6 +121,44 @@ Run all tests:
 uv run pytest
 ```
 
+## Pre-commit hooks
+
+Install hooks:
+
+```sh
+pre-commit install
+```
+
+Test pre-commit hooks while configuring them:
+
+```sh
+pre-commit install
+pre-commit run
+```
+
+### Enlace a Gits
+https://gist.github.com/ignaciotitos/92c1abbd397b890f5951c41326399afa
+
+## GitHub Actions
+
+Código de ejemplo para Github Actions con la herramienta Linter:
+'''
+name: Code Safety
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  check-linter:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v5
+      - run: uv sync
+      - run: uv run ruff check .
+'''
+
 ## Deployment
 
 ### Docker and Docker Hub
@@ -181,24 +218,6 @@ uv run pytest
      - `:` → `%3A`
      - `/` → `%2F`
        This ensures they are correctly transmitted in the request. [Learn more about URL encoding](https://developer.mozilla.org/en-US/docs/Glossary/Percent-encoding).
-
-## Pre-commit hooks
-
-Install hooks:
-
-```sh
-pre-commit install
-```
-
-Test pre-commit hooks while configuring them:
-
-```sh
-pre-commit install
-pre-commit run
-```
-
-### Enlace a Gits
-https://gist.github.com/ignaciotitos/92c1abbd397b890f5951c41326399afa
 
 ## Github Actions Extra: Running GitHub Actions Locally with Act
 
