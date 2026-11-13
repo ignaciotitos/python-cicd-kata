@@ -5,7 +5,7 @@
 This repository contains a very simple web service that simulates rolling a die by generating a random number. The main purpose of this project is to help you practice and understand key concepts of Continuous Integration (CI) and Continuous Deployment (CD). Throughout this workshop, you will explore how to set up a CI/CD pipeline with GitHub Actions for code quality checks, deliver the image to DockerHub and deploy to Render.
 
 - **Workshop slides**: [View the slides](https://drive.google.com/file/d/1e35IPeyIXVzQdm7Muk6vt8Y7_DxlSdzH/view?usp=sharing)
-- **Deployed service**: In progress...
+- **Deployed service**: In progress..
 
 ## Table of Contents
 
