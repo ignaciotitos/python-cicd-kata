@@ -1,5 +1,5 @@
-import random
+import secrets
 
 
 def get_dice_roll() -> int:
-    return random.randint(1, 6)  # noqa: S311
+    return secrets.randbelow(6) + 2
